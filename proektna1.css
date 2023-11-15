@@ -1,0 +1,749 @@
+body{
+    margin: 0px;
+    padding: 0px;;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: small;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.public {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10px;
+    color: rgb(158, 155, 155,0.5);
+}
+.phone{
+    margin-left: 50px;
+    color: rgb(255, 255, 255);
+    margin-left: 30px;
+    font-size: 0.9rem;
+}
+.social{
+    margin: 0px,70px ;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    gap: 20px;
+}
+.logo img{
+    width: 90px;
+    height: 90px;
+    position:sticky;
+}
+
+nav{
+    width: 100%;
+    box-shadow: 2px 2px 30px rgba(158, 155, 155, 0.5);
+    z-index: 100;
+}
+.navigation .right-menu .user{
+    width: 400px;
+}
+.navigation{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px,45px;
+    background: white;
+    text-decoration: none;
+    margin-right: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+}
+.menu
+{
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+.menu li{
+    position: relative;
+    margin: 15px;
+    display: flex;
+    text-transform: 500;
+    font-weight: 900;
+    padding: 0 8px;
+    line-height: 15px;
+
+}
+.menu li a:hover,
+.menu li a.active,
+.right-menu .active {
+    color:rgb(25, 180, 110);
+}
+.menu li a.active::after,
+.menu li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgb(25,180,110);
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+}
+.menu li a{
+    color: #555555;
+    transition: 0.1s ease;
+}
+.right-menu a{
+    margin: 0px,10px;
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.7);
+}
+.menu a:hover,
+.right-menu a:hover,
+.search-cancel:hover,
+.form-cancel:hover,
+.rate-cancel{
+    color: rgb(25, 180, 110);
+    transition: all ease 0.3s;
+}
+.fa-solid fa-cart-shopping{
+    position: relative;
+}
+.num-cart-product{
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    background-color: rgb(25, 180, 110);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+
+}
+.hero{
+    background-image: url(hero.png);
+    height: 90vh;
+    width: 100%;
+    background-size:contain;
+    background-position: top 25% right 0;
+    background-repeat: no-repeat;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 600;
+    font-style:inherit;
+    font-size:x-large;
+    line-height: 0px;
+    /*line-height: 5px;*/
+}
+.hero h1{
+    color:rgb(25,180,110)
+}
+/*.hero button{
+    /* background-image: url(naracaj.png); 
+    font-size: large;  
+    color: rgb(255, 34, 34);
+    border: 0;
+    background-size: 120px;
+    padding-top: 20px;
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    font-weight: 500;
+    font-size: 25px;
+    cursor: pointer;
+}
+*/
+.form{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 102;
+}
+.login-form,
+.sign-up-form{
+    width: 420px;
+    padding: 20px 10px;
+    background-color:#ffffff ;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px ;
+    position: relative;
+}
+.login-form form,
+.sign-up-form form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-form strong,
+.sign-up-form strong{
+    color: #272727;
+    font-size: 2rem;
+    margin: 2px 7px 7px 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+.login-form input,
+.sign-up-form input{
+    width: 90%;
+    height: 45px;
+    margin: 6px 0px;
+    padding: 0px 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+    outline: none;
+    border-radius: 7px;
+}
+.login-form input::placeholder,
+.sign-up-form input::placeholder{
+    color: rgba(0,0,0,0.5);
+}
+.login-form input[type="submit"],
+.sign-up-form input[type="submit"]{
+    background-color: rgb(25, 180, 110);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}
+.form-btns{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.form-btns a{
+    color: #4d4d4d;
+    font-size: 0.9rem;
+}
+.sign-up-btn{
+    border-bottom: 1px solid #868686;
+    line-height: 16px;
+}
+.form-cancel,
+.rate-cancel{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: #868686;
+}
+.login-form,
+.sign-up-form,
+.form{
+    display: none;
+}
+.login-active,
+.login-active .login-form{
+    display: flex;
+}
+.sign-up-active,
+.sign-up-active .sign-up-form{
+    display: flex;
+}
+
+.green-button {
+    background-color: rgb(25, 180, 110); /* Зелената боја */
+    color: white; /* Бела боја на текстот */
+    padding: 10px 20px; /* Поставете ги потребните падинг вредности */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: none; /* Одстраниваме ги рабовите на копчето */
+    border-radius: 4px; /* Закругли ги аголите на копчето */
+    cursor: pointer;
+}
+.product1,
+.product2,
+.product3{
+    text-align: center;
+    padding: 40px 40px;
+    /*display: flex; */
+}
+.pro-container {
+    display: flex;
+    justify-content: space-between;
+}
+.product1 .pro-container,
+.product2 .pro-container,
+.product3 .pro-container {
+    display:flex;
+    justify-content:space-between;
+    padding-top: 20px;
+    flex-wrap:wrap;
+}
+.product1 .pro,
+.product2 .pro,
+.product3 .pro {
+    width: 18%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 20px rgba(70, 68, 68, 0.2);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+.product1 .pro:hover,
+.product2 .pro:hover,
+.product3 .pro:hover
+{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.6);
+}
+
+.product1 .pro img,
+.product2 .pro img,
+.product3 .pro img{
+    width: 100%;
+    height: 70%;
+    border-radius: 20px;
+}
+.product1 .pro .description,
+.product2 .pro .description,
+.product3 .pro .description{
+    text-align: start;
+    padding: 10px 0;
+    line-height: 0px;
+}
+.product1 .pro .description span,
+.product2 .pro .description span,
+.product3 .pro .description span{
+    color: #868686;
+    font-size: 12px;
+}
+.product1 .pro .description h5,
+.product2 .pro .description h5,
+.product3 .pro .description h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+.product1 .pro .description i,
+.product2 .pro .description i,
+.product3 .pro .description i{
+    font-size: 12px;
+    color: rgba(243, 181, 25)
+}
+.product1 .pro .description h4,
+.product2 .pro .description h4,
+.product3 .pro .description h4{
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgb(25, 180, 110);
+}
+.product1 .pro .cart a,
+.product2 .pro .cart a,
+.product3 .pro .cart a{
+    width: 40px;
+    height:40px;
+    line-height: 40px;
+    align-items: center;
+    border-radius: 500px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: rgb(25,180,110);
+    border: 1px solid #cce7d0;
+    position:absolute;
+    bottom: 20px;
+    right: 10px;
+} 
+.section-p1{
+    padding: 40px 80px;
+}
+footer img{
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+}
+footer{
+    color: #868686;
+    line-height: 12px;
+    margin-top: auto; 
+}
+.prodetails .single-pro-image{
+    width: 30%;
+    margin-right: 50px;
+    margin-left: 130px;
+    margin-top: 50px;
+}
+.prodetails{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.prodetails .single-pro-details{
+    width: 30%;
+    padding-top: 30px;
+    padding-right: 100px;
+    margin-right: 100px;
+}
+.prodetails .single-pro-details h4{
+    padding: 40px 0 20px 0;
+}
+.prodetails .single-pro-details h2{
+    font-size: 26px;
+}
+.prodetails .single-pro-details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+.prodetails .single-pro-details input:focus{
+    outline: none;
+}
+.prodetails .single-pro-details button{
+    background-color: rgb(25,180,110) ;
+    color: #ffffff;
+}
+.prodetails .single-pro-details span{
+    line-height: 18px;
+}
+.form-details form{
+    width: 65%;
+    display: flex;
+    flex-direction: column ;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.form-details form span{
+    font-size: 12px;
+}
+.form-details form h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+.form-details form input,
+.form-details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+
+
+.popup{
+    width: 400px;
+    height: 170px;
+    background-color:rgba(199, 230, 184, 0.89);
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    border: #1a1a1a;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+.popup li a{
+    font-size: small;
+    list-style-type: none;
+}
+.feedback-container{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+}
+.emoji-container{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    overflow: hidden; 
+    border-radius: 100%;
+    transform: translateX(-50%); 
+    font-size: 16px;
+    letter-spacing: 10px;
+
+} 
+
+.fa-regular {
+    margin: 0px 1px;
+    /* transform: translateX(10px); */
+} 
+.rating-container{
+    position:absolute;
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
+}
+.fa-star{
+    cursor: pointer;
+    color:rgb(220, 215, 215);
+}
+.active {
+    color: yellow;
+}
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space:nowrap;
+}
+#cart table img{
+    width: 70px;
+}
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+}
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input{
+    width: 40px;
+    padding: 10px 5px 10px 15px;
+}
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+#cart table tbody td{
+    font-size: 13px;
+}
+#cart-add{
+    text-align:justify;
+    
+}
+#Vkupno {
+    width: 400px; /* Set a fixed width or adjust as needed */
+    margin-left: auto;
+    margin-right:50px;
+    margin-bottom:30px ;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+#Vkupno table{
+    border-collapse: collapse;
+    width: 400px;
+    margin-bottom: 20px;
+}
+#Vkupno table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;font-size: 13px;
+}
+#Vkupno h3{
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+.center__display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .top{
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+.top .likes__count{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: red;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+.likes__count small{
+    font-size: 20px;
+    margin-left: 5px;
+}
+form{
+    display: grid;
+    grid-template-columns: 5% 80% 15%;
+}
+
+.form__info input{
+    border: none;
+    background: transparent;
+    width: 70%;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.form__info input::placeholder{
+    color: #ddd;
+}
+
+.top .heart__icon{
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.top button{
+    background-color: rgb(25, 180, 110);
+    height: 50%;
+    border: none;
+    outline: none;
+    color: white;
+    transform: translateY(50%);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.comments__container{
+    width: 800px;
+    margin-top: 2rem;
+}
+
+.comment__card{
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 10% auto;
+    margin: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.comment__card .pic{
+    background-color: #48cae4;
+    border-radius: 50%;
+    margin: 10%;
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+}
+
+.comment__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comment__info .nickname{
+    color: #aaa;
+}
+.comment__info .comment{
+    margin: 5px 0;
+}
+
+.comment__info .comment__bottom{
+    display: flex;
+}
+
+.comment__bottom .heart__icon--comment{
+    font-size: 20px;
+    margin-right: 20px;
+    color: #eee;
+} 
+
+.heart__icon--comment .fas.positive{
+    color: red;
+}
+
+
+.comment__bottom button{
+    border: none;
+    background: transparent;
+    color: #aaa;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.container .top .photo__container img{
+    width: 700px;
+}
+
+.form-details .people div{
+    padding-top: 15px;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+.form-details .people div img{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.form-details .people div p{
+    margin-top: 20px;
+    font-size: 13px;
+    line-height: 15px;
+}
+.form-details .people div p span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+.form-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;border: 1px solid #e1e1e1;
+}
+
+
+
+
+
